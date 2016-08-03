@@ -1,46 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>new-sortables</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <style>
-     #pages, #cloned_items {
-     list-style: none;
-     }
-
-     #pages li {
-     float: left;
-     position: relative;
-     z-index: 5;
-     }
-
-     ul li {
-     margin: 15px 15px 15px 15px;
-     padding: 1px;
-     width: 80px;
-     height: 60px;
-     font-size: 1em;
-     text-align: center;
-     border: solid 1px #333;
-     background-color: #eaa10e;
-     }
-
-     #cloned_items li {
-     position: absolute;
-     z-index: 1;
-     background-color: #eaa10e;
-     }
-     body {
-       padding: 50px;
-       font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-     }
-
-     a {
-       color: #00B7FF;
-     }
-  </style>
+  <% include partials/head %>
 </head>
 <body>
   <div class="container">
@@ -56,16 +17,14 @@
            </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
      </div>
-     <ul id="pages">
 
-     </ul>
-     <ul id="cloned_items">
-     </ul>
+     <ul id="pages"></ul>
+     <ul id="cloned_items"></ul>
   </div>
-  <!-- jQuery -->
-  <script   src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
-  <!-- jQuery UI -->
-  <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+
+  <% include partials/jquery %>
+
+  <!-- Pages generator -->
   <script type="text/javascript">
     $(function () {
       var pages = <%- pages %>;
@@ -82,6 +41,13 @@
       });
     });
   </script>
+
+  <!-- Pages sorter -->
   <script src="javascripts/sortable.js"></script>
+
+  <!-- Droppable search -->
+  <script src="javascripts/droppable-search.js">
+
+  </script>
 </body>
 </html>

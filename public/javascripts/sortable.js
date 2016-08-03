@@ -1,6 +1,11 @@
-$(function(){
+/*
+ * Makes the pages list sortable with animations.
+ * On drop sends the new order of the pages to the server,
+ * where it is saved.
+ */
 
-   // loop through the original items
+$(function(){
+   // loop through pages
    $("#pages li").each(function () {
 
       // clone the original items to make their
@@ -105,23 +110,6 @@ $(function(){
                top:position.top
             }, 300);
          });
-      }
-   });
-
-   // adds a search string to the google search input element
-   $('#google-search').droppable({
-      drop: function (event, ui) {
-         // stores the url of the page
-         var draggableHref = ui.draggable.find("a").attr("href");
-         // if search query is empty
-         if ($(this).val() == "") {
-            $(this).val("site:" + draggableHref);
-         }
-         // else search query is not empty
-         else {
-            // appends current site string to current query
-            $(this).val($(this).val() + " OR site:" + draggableHref);
-         }
       }
    });
 });
