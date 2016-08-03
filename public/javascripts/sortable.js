@@ -1,13 +1,4 @@
 $(function(){
-   // asks for pages.json from server
-   var Pages = [];
-   $.getJSON('./process.json', function (Pages) {
-      $.each(Pages, function (key, value) {
-         Pages.push(value);
-      });
-   }, console.log(Pages));
-
-   
 
    // loop through the original items
    $("#pages li").each(function () {
@@ -83,16 +74,14 @@ $(function(){
             };
             pages.push(page);
          });
-         pages = JSON.stringify(pages);
-         pages = "{ \"pages\" : " + pages + " }";
 
          // posts the new order of the pages to server
          $.ajax({
             url: '/',
             type: 'POST',
-            dataType: 'json',
-            data: pages,
-            //success: console.log(pages)
+            dataType: 'text',
+            data: JSON.stringify(pages),
+            //success: console.log(JSON.stringify(pages))
          });
       },
 

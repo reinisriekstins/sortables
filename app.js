@@ -11,7 +11,7 @@ var users = require('./routes/users');
 var app = express();
 
 /// remove this after changing the architecture
-app.locals.pagesJSON = require('./pages.json');
+//app.locals.pagesJSON = require('./pages.json');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
