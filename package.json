@@ -12,9 +12,8 @@
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
     "express": "~4.13.4",
-    "mincer": "^1.4.2",
-    "morgan": "~1.7.0",
     "node-sass-middleware": "0.8.0",
+    "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
   }
 }

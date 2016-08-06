@@ -27,7 +27,7 @@ app.use(sass({
   indentedSyntax: false,
   sourceMap: true,
   debug: true,
-  outputStyle: 'nested',
+  outputStyle: 'compressed'
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
