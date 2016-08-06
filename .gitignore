@@ -48,5 +48,3 @@ benchmarks/graphs
 
 # Custom files
 pages.json
-*.css
-*.css.map
