@@ -48,3 +48,4 @@ benchmarks/graphs
 
 # Custom files
 pages.json
+public/stylesheets/bootstrap

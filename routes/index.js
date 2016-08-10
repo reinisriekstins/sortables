@@ -1,4 +1,3 @@
-'use strict';
 var express = require('express');
 var router = express.Router();
 
@@ -18,10 +17,6 @@ router.get('/', function(req, res, next) {
         { pages: data});
     }
   });
-
-
-
-
 });
 
 // receives the new order of pages and saves it to pages.json

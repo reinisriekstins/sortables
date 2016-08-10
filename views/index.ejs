@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% include partials/head %>
+  <% include partials/_head %>
 </head>
 <body>
   <div class="container">
@@ -10,7 +10,7 @@
            <div class="input-group">
               <input type="text" id="google-search" class="form-control" placeholder="Search for...">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-default btn-search" type="button">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
               </span>
@@ -22,7 +22,7 @@
      <ul id="cloned_items"></ul>
   </div>
 
-  <% include partials/jquery %>
+  <% include partials/_jquery %>
 
   <!-- Pages generator -->
   <script type="text/javascript">
